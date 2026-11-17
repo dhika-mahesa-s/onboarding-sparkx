@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SparkX — Self-Onboarding Guideline</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/screenshots/source/sign-in.png" type="image/png">
+</head>
+<body>
+
+  <!-- Ambient background glow elements -->
+  <div class="bg-ambient-orb orb-1"></div>
+  <div class="bg-ambient-orb orb-2"></div>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="top-header">
+    <div class="header-container">
+      <a href="#section-01" class="brand-wrapper">
+        <span class="brand-logo">spark<span class="logo-x">X</span></span>
+        <span class="brand-divider"></span>
+        <span class="brand-badge">
+          <span class="pulse-dot"></span>
+          <span data-i18n="guideBadge">Self-Onboarding Guide</span>
+        </span>
+      </a>
+
+      <div class="header-controls">
+        <div class="progress-pill">
+          <span id="stepCounterText" data-i18n="stepOf">Step 1 of 6</span>
+        </div>
+
+        <!-- Language Toggle Switcher -->
+        <button id="langToggleBtn" class="lang-toggle-btn" aria-label="Toggle language between English and Indonesian">
+          <span id="langPillEn" class="active">EN</span>
+          <span id="langPillId">ID</span>
+        </button>
+      </div>
+    </div>
+    <div class="reading-progress-track">
+      <div id="readingProgressBar" class="reading-progress-bar"></div>
+    </div>
+  </header>
+
+  <!-- Main Layout Container -->
+  <div class="layout-container">
+
+    <!-- Left Sticky Sidebar Stepper -->
+    <aside class="sidebar-sticky">
+      <div class="stepper-card">
+        <div class="stepper-header">
+          <div class="stepper-title" data-i18n="guideBadge">Onboarding Steps</div>
+        </div>
+
+        <nav class="stepper-nav" aria-label="Onboarding Steps Navigation">
+          <a href="#section-01" class="step-nav-item active">
+            <span class="step-badge">1</span>
+            <div class="step-meta">
+              <span class="step-num-text">01 • Intro</span>
+              <span class="step-title-text" data-i18n="nav1">Welcome to SparkX</span>
+            </div>
+          </a>
+
+          <a href="#section-02" class="step-nav-item">
+            <span class="step-badge">2</span>
+            <div class="step-meta">
+              <span class="step-num-text">02 • Concept</span>
+              <span class="step-title-text" data-i18n="nav2">Understanding SparkX</span>
+            </div>
+          </a>
+
+          <a href="#section-03" class="step-nav-item">
+            <span class="step-badge">3</span>
+            <div class="step-meta">
+              <span class="step-num-text">03 • Access</span>
+              <span class="step-title-text" data-i18n="nav3">Getting Started</span>
+            </div>
+          </a>
+
+          <a href="#section-04" class="step-nav-item">
+            <span class="step-badge">4</span>
+            <div class="step-meta">
+              <span class="step-num-text">04 • Setup</span>
+              <span class="step-title-text" data-i18n="nav4">Account Setup & Activation</span>
+            </div>
+          </a>
+
+          <a href="#section-05" class="step-nav-item">
+            <span class="step-badge">5</span>
+            <div class="step-meta">
+              <span class="step-num-text">05 • Org Setup</span>
+              <span class="step-title-text" data-i18n="nav5">Setting Up Your Organization</span>
+            </div>
+          </a>
+
+          <a href="#section-06" class="step-nav-item">
+            <span class="step-badge">6</span>
+            <div class="step-meta">
+              <span class="step-num-text">06 • Ready</span>
+              <span class="step-title-text" data-i18n="nav6">Ready to Start</span>
+            </div>
+          </a>
+        </nav>
+
+        <div class="step-help-box">
+          <div class="step-help-title">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+            <span data-i18n="helpTitle">Need assistance?</span>
+          </div>
+          <p class="step-help-desc" data-i18n="helpDesc">If your activation link has expired or you cannot access your account, contact your HR Administrator.</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right Main Content Area -->
+    <main class="content-area">
+
+      <!-- ====================================================================
+           SECTION 01: Welcome to SparkX
+           ==================================================================== -->
+      <section id="section-01" class="onboarding-section">
+        <div class="section-header-block">
+          <span class="section-pill-tag" data-i18n="s1Badge">Step 01 • Introduction</span>
+          <h1 class="section-main-title" data-i18n="s1Title">Welcome to SparkX</h1>
+          <p class="section-lead-text" data-i18n="s1Lead">Your centralized digital workplace for attendance, leave, benefits, and workplace collaboration.</p>
+        </div>
+
+        <div class="hero-welcome-card">
+          <h2 class="hero-welcome-title" data-i18n="s1HeroTitle">A Modern, Simplified HR Experience</h2>
+          <p class="hero-welcome-desc" data-i18n="s1HeroDesc">SparkX is designed to give you direct autonomy over your work life. Access everything you need — from time logs to reimbursement claims — effortlessly from any device.</p>
+        </div>
+
+        <!-- 3 Core Benefits Cards -->
+        <div class="props-grid">
+          <div class="prop-card">
+            <div class="prop-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+            <h3 class="prop-title" data-i18n="prop1Title">Self-Service Autonomy</h3>
+            <p class="prop-desc" data-i18n="prop1Desc">Submit leave, record check-ins, and file claims directly without paper forms or lengthy manual email chains.</p>
+          </div>
+
+          <div class="prop-card">
+            <div class="prop-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <h3 class="prop-title" data-i18n="prop2Title">Transparency & Speed</h3>
+            <p class="prop-desc" data-i18n="prop2Desc">Track real-time approval statuses from your managers, view leave balances, and check policy limits instantly.</p>
+          </div>
+
+          <div class="prop-card">
+            <div class="prop-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            </div>
+            <h3 class="prop-title" data-i18n="prop3Title">Unified Workspace</h3>
+            <p class="prop-desc" data-i18n="prop3Desc">A single secure platform connecting all essential company tools, document requests, and team directories.</p>
+          </div>
+        </div>
+
+        <div class="section-nav-footer">
+          <div></div>
+          <button class="btn-nav btn-nav-next" data-nav-target="section-02">
+            <span data-i18n="nextBtn">Next Step</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 02: Understanding SparkX & Modules
+           ==================================================================== -->
+      <section id="section-02" class="onboarding-section">
+        <div class="section-header-block">
+          <span class="section-pill-tag" data-i18n="s2Badge">Step 02 • Core Concept</span>
+          <h2 class="section-main-title" data-i18n="s2Title">Understanding SparkX & Modules</h2>
+          <p class="section-lead-text" data-i18n="s2Lead">SparkX operates as an Employee Self-Service (ESS) platform tailored for clarity and efficiency.</p>
+        </div>
+
+        <!-- Concept Card -->
+        <div class="prop-card" style="background: var(--gradient-soft); border-color: rgba(99, 102, 241, 0.25); margin-bottom: 32px;">
+          <h3 class="prop-title" style="color: var(--primary-dark); font-size: 18px;" data-i18n="essConceptTitle">What is Employee Self-Service (ESS)?</h3>
+          <p class="prop-desc" style="font-size: 14.5px;" data-i18n="essConceptDesc">Instead of emailing HR or filing paper slips for everyday administrative needs, ESS empowers every employee to view, manage, and request company services autonomously in real-time.</p>
+        </div>
+
+        <h3 class="modules-category-title" data-i18n="confirmedModulesTitle">Confirmed Platform Modules</h3>
+
+        <!-- Grid of Confirmed Modules -->
+        <div class="modules-grid">
+          <div class="module-card">
+            <div class="module-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div class="module-name" data-i18n="mTime">Time & Attendance</div>
+            <div class="module-desc" data-i18n="mTimeDesc">Check-in/out records, attendance logs, and self-service correction requests.</div>
+            <span class="module-tag">Core Daily</span>
+          </div>
+
+          <div class="module-card">
+            <div class="module-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 10"></polyline><polyline points="12 12 16 16"></polyline></svg>
+            </div>
+            <div class="module-name" data-i18n="mOvertime">Overtime Management</div>
+            <div class="module-desc" data-i18n="mOvertimeDesc">Overtime submissions, rate tracking, and automated managerial approval chains.</div>
+            <span class="module-tag">Operational</span>
+          </div>
+
+          <div class="module-card">
+            <div class="module-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <div class="module-name" data-i18n="mLeave">Leave & Time Off</div>
+            <div class="module-desc" data-i18n="mLeaveDesc">Annual leave, sick days, substitute leave (PHL), and collective leave balances.</div>
+            <span class="module-tag">Balance Tracking</span>
+          </div>
+
+          <div class="module-card">
+            <div class="module-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            </div>
+            <div class="module-name" data-i18n="mMedical">Medical Reimbursement</div>
+            <div class="module-desc" data-i18n="mMedicalDesc">Submit medical receipts against transparent, pre-configured annual caps.</div>
+            <span class="module-tag">Benefits</span>
+          </div>
+
+          <div class="module-card">
+            <div class="module-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg>
+            </div>
+            <div class="module-name" data-i18n="mTravel">Business Travel</div>
+            <div class="module-desc" data-i18n="mTravelDesc">Travel authorization, accommodation per diems, and expense declarations.</div>
+            <span class="module-tag">Dinas / Travel</span>
+          </div>
+
+          <div class="module-card">
+            <div class="module-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            </div>
+            <div class="module-name" data-i18n="mClaims">Claim & Expenses</div>
+            <div class="module-desc" data-i18n="mClaimsDesc">Operational expense claims, reimbursement batches, and receipt auditing.</div>
+            <span class="module-tag">Finance</span>
+          </div>
+
+          <div class="module-card">
+            <div class="module-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="module-name" data-i18n="mDocs">Document Center</div>
+            <div class="module-desc" data-i18n="mDocsDesc">Instant requests for employment verification letters and payslip distribution.</div>
+            <span class="module-tag">Documents</span>
+          </div>
+
+          <div class="module-card">
+            <div class="module-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <div class="module-name" data-i18n="mAssets">iShop & Assets</div>
+            <div class="module-desc" data-i18n="mAssetsDesc">Company asset inventory, laptop requests, and office equipment procurement.</div>
+            <span class="module-tag">Equipment</span>
+          </div>
+
+          <div class="module-card">
+            <div class="module-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"></rect><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <div class="module-name" data-i18n="mMeeting">Meeting Rooms</div>
+            <div class="module-desc" data-i18n="mMeetingDesc">Real-time meeting room calendar and reservation bookings.</div>
+            <span class="module-tag">Facilities</span>
+          </div>
+        </div>
+
+        <div class="section-nav-footer">
+          <button class="btn-nav btn-nav-prev" data-nav-target="section-01">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <span data-i18n="prevBtn">Previous Step</span>
+          </button>
+          <button class="btn-nav btn-nav-next" data-nav-target="section-03">
+            <span data-i18n="nextBtn">Next Step</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 03: Getting Started & Login
+           ==================================================================== -->
+      <section id="section-03" class="onboarding-section">
+        <div class="section-header-block">
+          <span class="section-pill-tag" data-i18n="s3Badge">Step 03 • Access</span>
+          <h2 class="section-main-title" data-i18n="s3Title">Getting Started & Login</h2>
+          <p class="section-lead-text" data-i18n="s3Lead">Access SparkX securely through any modern web browser without installing additional desktop software.</p>
+        </div>
+
+        <!-- Access instructions card -->
+        <div class="prop-card" style="margin-bottom: 24px;">
+          <h3 class="prop-title" data-i18n="accessUrlTitle">How to Access</h3>
+          <p class="prop-desc" data-i18n="accessUrlDesc">Navigate to your company's SparkX URL (e.g., https://nautilus-staging-645716388397.asia-southeast2.run.app/login). Bookmark this page for quick everyday access.</p>
+        </div>
+
+        <!-- Login Methods Breakdown -->
+        <h3 class="modules-category-title" data-i18n="loginMethodsTitle">Available Login Methods</h3>
+        <div class="props-grid">
+          <div class="prop-card">
+            <div class="prop-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h4 class="prop-title" data-i18n="loginMethod1">Work Email & Password</h4>
+            <p class="prop-desc" data-i18n="loginMethod1Desc">Use your registered company email address and the secret password chosen during activation.</p>
+          </div>
+
+          <div class="prop-card">
+            <div class="prop-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12"></path></svg>
+            </div>
+            <h4 class="prop-title" data-i18n="loginMethod2">Google Workspace SSO</h4>
+            <p class="prop-desc" data-i18n="loginMethod2Desc">One-click single sign-on using your official Google company account.</p>
+          </div>
+
+          <div class="prop-card">
+            <div class="prop-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 0-10 10c0 5.5 4.5 10 10 10s10-4.5 10-10"></path><path d="M12 6a6 6 0 0 0-6 6c0 3.3 2.7 6 6 6s6-2.7 6-6"></path></svg>
+            </div>
+            <h4 class="prop-title" data-i18n="loginMethod3">Biometrics / Passkeys</h4>
+            <p class="prop-desc" data-i18n="loginMethod3Desc">FIDO-compliant fingerprint or facial recognition on supported devices for rapid, secure login.</p>
+          </div>
+        </div>
+
+        <!-- Actual Screenshot: Login Page Mockup -->
+        <div class="browser-mockup">
+          <div class="mockup-toolbar">
+            <div class="mockup-dots">
+              <span class="mockup-dot dot-red"></span>
+              <span class="mockup-dot dot-yellow"></span>
+              <span class="mockup-dot dot-green"></span>
+            </div>
+            <div class="mockup-address-bar">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              <span>https://nautilus-staging...run.app/login</span>
+            </div>
+            <div class="mockup-zoom-hint">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              <span data-i18n="zoomHint">Click image to zoom</span>
+            </div>
+          </div>
+          <div class="mockup-viewport">
+            <img src="assets/screenshots/source/sign-in.png" alt="SparkX Sign-in Portal Screen" loading="eager">
+          </div>
+          <div class="mockup-caption">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            <span data-i18n="loginCaption">Actual SparkX login screen featuring multi-method sign-in and password recovery options.</span>
+          </div>
+        </div>
+
+        <div class="section-nav-footer">
+          <button class="btn-nav btn-nav-prev" data-nav-target="section-02">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <span data-i18n="prevBtn">Previous Step</span>
+          </button>
+          <button class="btn-nav btn-nav-next" data-nav-target="section-04">
+            <span data-i18n="nextBtn">Next Step</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 04: Account Setup & Activation (Revised: Dual Pathways & 6-Stage Org Flow)
+           ==================================================================== -->
+      <section id="section-04" class="onboarding-section">
+        <div class="section-header-block">
+          <span class="section-pill-tag" data-i18n="s4Badge">Step 04 • Account Setup</span>
+          <h2 class="section-main-title" data-i18n="s4Title">Account Setup & Activation</h2>
+          <p class="section-lead-text" data-i18n="s4Lead">SparkX provides two distinct setup pathways designed for different user types. Please identify which journey applies to your role.</p>
+        </div>
+
+        <!-- Dual Pathways: Equal Weight Visual Cards -->
+        <div class="dual-pathways-grid">
+          <div class="pathway-card">
+            <span class="pathway-badge badge-emp" data-i18n="pwEmpBadge">Pathway 1: Employee Invitation</span>
+            <h3 class="pathway-title" data-i18n="pwEmpTitle">Employee Invitation</h3>
+            <div class="pathway-audience"><span data-i18n="pwEmpAudience">Audience: Employees invited by their company's HR or Administrator</span></div>
+            <p class="pathway-summary" data-i18n="pwEmpSummary">If your employer is already set up on SparkX, you do NOT create a separate company organization. Your HR administrator initiates your account invitation directly.</p>
+            <div class="process-flow-list">
+              <div class="process-step-item"><div class="step-num-badge">1</div><div class="step-detail-content"><p class="step-item-desc" data-i18n="empStep1">Receive an invitation email from your HR administrator.</p></div></div>
+              <div class="process-step-item"><div class="step-num-badge">2</div><div class="step-detail-content"><p class="step-item-desc" data-i18n="empStep2">Open the secure activation link in your work email.</p></div></div>
+              <div class="process-step-item"><div class="step-num-badge">3</div><div class="step-detail-content"><p class="step-item-desc" data-i18n="empStep3">Create your password and sign in to SparkX.</p></div></div>
+            </div>
+          </div>
+          <div class="pathway-card">
+            <span class="pathway-badge badge-org" data-i18n="pwOrgBadge">Pathway 2: Organization Creation</span>
+            <h3 class="pathway-title" data-i18n="pwOrgTitle">Organization Creation</h3>
+            <div class="pathway-audience"><span data-i18n="pwOrgAudience">Audience: HR Leaders & Company Founders establishing a new organization</span></div>
+            <p class="pathway-summary" data-i18n="pwOrgSummary">For administrators setting up SparkX for an entire legal entity. This is a verified approval workflow.</p>
+            <div class="pathway-milestones">
+              <h4>Admin registration journey</h4>
+              <ol><li>Complete the organization registration form.</li><li>Activate your account through the email link.</li><li>Wait for Super Admin approval.</li><li>Receive approval, create your password, and continue to organization setup.</li></ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="browser-mockup pathway-shared-image">
+          <div class="mockup-toolbar"><div class="mockup-dots"><span class="mockup-dot dot-red"></span><span class="mockup-dot dot-yellow"></span><span class="mockup-dot dot-green"></span></div><div class="mockup-address-bar"><span>/start — Choose how to join SparkX</span></div></div>
+          <div class="mockup-viewport"><img src="assets/screenshots/source/choose-create-organization.png" alt="SparkX employee invitation and organization creation options" loading="eager"></div>
+          <div class="mockup-caption"><span>SparkX system prompt: "Joining your employer? Your HR invites you by email, to your work address."</span></div>
+        </div>
+
+        <!-- Admin account creation flow: follows the supplied Create Account folder sequence -->
+        <div class="org-flow-container">
+          <div class="org-flow-header">
+            <span class="section-pill-tag" style="background: #faf5ff; color: #7e22ce;">Admin Account Journey</span>
+            <h3 class="section-main-title" style="font-size: 22px;">Create an Admin Account & Register Your Organization</h3>
+            <p class="section-lead-text">Follow these steps in order to create your SparkX admin account, register your organization, and wait for Super Admin approval.</p>
+          </div>
+
+          <div class="org-stage-item">
+            <div class="org-stage-top"><span class="stage-pill">1</span><h4 class="stage-title">Step 1: Create Your Account</h4></div>
+            <p class="stage-desc">Open the SparkX registration page and complete the initial account form using your name and email address. Select <strong>Continue</strong> to proceed. Make sure you use an email address that you can access, because SparkX will send a confirmation email to this address.</p>
+            <div class="browser-mockup">
+              <div class="mockup-toolbar"><div class="mockup-dots"><span class="mockup-dot dot-red"></span><span class="mockup-dot dot-yellow"></span><span class="mockup-dot dot-green"></span></div><div class="mockup-address-bar"><span>/register — Create your account</span></div></div>
+              <div class="mockup-viewport"><img src="assets/screenshots/source/create-account-flow/step-1-create-account.png" alt="Create your SparkX account form" loading="eager"></div>
+              <div class="mockup-caption"><span>Complete the initial registration form with your name and email address.</span></div>
+            </div>
+          </div>
+
+          <div class="org-stage-item">
+            <div class="org-stage-top"><span class="stage-pill">2</span><h4 class="stage-title">Step 2: Confirm Your Email Address</h4></div>
+            <p class="stage-desc">After submitting the account form, a confirmation screen will ask you to check your inbox. Open the confirmation email sent by SparkX and select the confirmation link to verify your email address.</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
+              <div class="browser-mockup"><div class="mockup-toolbar"><div class="mockup-dots"><span class="mockup-dot dot-red"></span><span class="mockup-dot dot-yellow"></span><span class="mockup-dot dot-green"></span></div><div class="mockup-address-bar"><span>Registration — Check your inbox</span></div></div><div class="mockup-viewport"><img src="assets/screenshots/source/create-account-flow/step-2-confirmation-screen.png" alt="Check your inbox confirmation screen" loading="eager"></div><div class="mockup-caption"><span>After submitting your details, SparkX displays a reminder to check your email.</span></div></div>
+              <div class="browser-mockup"><div class="mockup-toolbar"><div class="mockup-dots"><span class="mockup-dot dot-red"></span><span class="mockup-dot dot-yellow"></span><span class="mockup-dot dot-green"></span></div><div class="mockup-address-bar"><span>Email — Confirm your email</span></div></div><div class="mockup-viewport"><img src="assets/screenshots/source/create-account-flow/step-2-confirmation-email.png" alt="SparkX confirmation email" loading="eager"></div><div class="mockup-caption"><span>Open the email from SparkX and use the confirmation link to verify your email address.</span></div></div>
+            </div>
+          </div>
+
+          <div class="org-stage-item">
+            <div class="org-stage-top"><span class="stage-pill">3</span><h4 class="stage-title">Step 3: Create Your Password</h4></div>
+            <p class="stage-desc">Once your email address has been confirmed, continue to the password setup page. Create a password for your SparkX account and submit it to complete your account setup.</p>
+            <div class="browser-mockup"><div class="mockup-toolbar"><div class="mockup-dots"><span class="mockup-dot dot-red"></span><span class="mockup-dot dot-yellow"></span><span class="mockup-dot dot-green"></span></div><div class="mockup-address-bar"><span>/create-password</span></div></div><div class="mockup-viewport"><img src="assets/screenshots/source/create-account-flow/step-3-create-password.png" alt="Create your SparkX password" loading="eager"></div><div class="mockup-caption"><span>Create a password to secure your SparkX admin account.</span></div></div>
+          </div>
+
+          <div class="org-stage-item">
+            <div class="org-stage-top"><span class="stage-pill">4</span><h4 class="stage-title">Step 4: Choose Create an Organization</h4></div>
+            <p class="stage-desc">After signing in, SparkX will show the available options. Since you are registering a new company, select <strong>Create a new organization</strong> to continue with the organization registration process. If you are joining an existing employer, choose the employee invitation option instead.</p>
+            <div class="browser-mockup"><div class="mockup-toolbar"><div class="mockup-dots"><span class="mockup-dot dot-red"></span><span class="mockup-dot dot-yellow"></span><span class="mockup-dot dot-green"></span></div><div class="mockup-address-bar"><span>/start — Choose how to continue</span></div></div><div class="mockup-viewport"><img src="assets/screenshots/source/create-account-flow/step-4-choose-organization.png" alt="Choose to join an employer or create a new organization" loading="eager"></div><div class="mockup-caption"><span>Select Create a new organization to register your company on SparkX.</span></div></div>
+          </div>
+
+          <div class="org-stage-item">
+            <div class="org-stage-top"><span class="stage-pill">5</span><h4 class="stage-title">Step 5: Fill In Your Organization Details</h4></div>
+            <p class="stage-desc">Complete the organization registration form with the required company information. Review the details carefully, then select <strong>Submit for approval</strong>. A currency confirmation dialog will appear; check the selected currency and confirm that it is correct before submitting your request.</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
+              <div class="browser-mockup"><div class="mockup-toolbar"><div class="mockup-dots"><span class="mockup-dot dot-red"></span><span class="mockup-dot dot-yellow"></span><span class="mockup-dot dot-green"></span></div><div class="mockup-address-bar"><span>/organization/create — Organization details</span></div></div><div class="mockup-viewport"><img src="assets/screenshots/source/create-account-flow/step-5-create-organization-form.png" alt="Create a new organization form" loading="eager"></div><div class="mockup-caption"><span>Enter the required company details in the organization registration form.</span></div></div>
+              <div class="browser-mockup"><div class="mockup-toolbar"><div class="mockup-dots"><span class="mockup-dot dot-red"></span><span class="mockup-dot dot-yellow"></span><span class="mockup-dot dot-green"></span></div><div class="mockup-address-bar"><span>Confirmation dialog — Company currency</span></div></div><div class="mockup-viewport"><img src="assets/screenshots/source/create-account-flow/step-5-currency-confirmation.png" alt="Confirm the organization currency" loading="eager"></div><div class="mockup-caption"><span>Review and confirm the currency selected for your organization before submitting.</span></div></div>
+            </div>
+          </div>
+
+          <div class="org-stage-item">
+            <div class="org-stage-top"><span class="stage-pill" style="background:#d97706;">6</span><h4 class="stage-title">Step 6: Wait for Super Admin Approval</h4></div>
+            <p class="stage-desc">After your organization details have been submitted, the request will be reviewed by the Super Admin. Your SparkX page will show that the request is waiting for approval, and you will also receive an email confirming that your request has been received. Wait for the approval decision before proceeding.</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
+              <div class="browser-mockup"><div class="mockup-toolbar"><div class="mockup-dots"><span class="mockup-dot dot-red"></span><span class="mockup-dot dot-yellow"></span><span class="mockup-dot dot-green"></span></div><div class="mockup-address-bar"><span>/start — Waiting for approval</span></div></div><div class="mockup-viewport"><img src="assets/screenshots/source/create-account-flow/step-6-waiting-approval-screen.png" alt="Organization request waiting for approval" loading="eager"></div><div class="mockup-caption"><span>SparkX displays the organization request status while it is being reviewed.</span></div></div>
+              <div class="browser-mockup"><div class="mockup-toolbar"><div class="mockup-dots"><span class="mockup-dot dot-red"></span><span class="mockup-dot dot-yellow"></span><span class="mockup-dot dot-green"></span></div><div class="mockup-address-bar"><span>Email — Request received</span></div></div><div class="mockup-viewport"><img src="assets/screenshots/source/create-account-flow/step-6-waiting-approval-email.png" alt="Email confirming the organization request was received" loading="eager"></div><div class="mockup-caption"><span>You will receive an email confirming that SparkX has received your organization request.</span></div></div>
+            </div>
+          </div>
+
+          <div class="source-shot-section rejection-reference">
+            <div class="source-shot-heading"><span class="source-shot-kicker">REJECTION SCENARIO</span><span class="source-shot-title">What happens if the request is rejected?</span><span class="source-shot-hint">The Super Admin may reject the request after reviewing the submitted organization details.</span></div>
+            <div class="source-shot-grid">
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/Rejection%20Account/rejection%20email.jpeg" alt="Rejection notification email" loading="eager"></div><figcaption>Rejection notification email</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/Rejection%20Account/rejection%20message%20from%20web.jpeg" alt="Rejected request message in SparkX" loading="eager"></div><figcaption>Rejected request message in SparkX</figcaption></figure>
+            </div>
+            <p class="prop-desc" style="margin-top:14px;">If your request is rejected, check the notification and the message shown in SparkX for further information. You will need to address the issue before continuing with organization setup.</p>
+          </div>
+
+          <div class="org-stage-item">
+            <div class="org-stage-top"><span class="stage-pill" style="background:#16a34a;">7</span><h4 class="stage-title">Step 7: Receive Approval and Continue</h4></div>
+            <p class="stage-desc">If the Super Admin approves your organization request, you will receive an approval email confirming that your organization is ready. Return to SparkX and continue from the organization page. You can then proceed to the next section of this guideline to set up your organization.</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
+              <div class="browser-mockup"><div class="mockup-toolbar"><div class="mockup-dots"><span class="mockup-dot dot-red"></span><span class="mockup-dot dot-yellow"></span><span class="mockup-dot dot-green"></span></div><div class="mockup-address-bar"><span>Email — Organization approved</span></div></div><div class="mockup-viewport"><img src="assets/screenshots/source/create-account-flow/step-7-approval-success-email.png" alt="Organization approval successful email" loading="eager"></div><div class="mockup-caption"><span>Approval email confirming that your organization is ready on SparkX.</span></div></div>
+              <div class="browser-mockup"><div class="mockup-toolbar"><div class="mockup-dots"><span class="mockup-dot dot-red"></span><span class="mockup-dot dot-yellow"></span><span class="mockup-dot dot-green"></span></div><div class="mockup-address-bar"><span>/start — Your organizations</span></div></div><div class="mockup-viewport"><img src="assets/screenshots/source/create-account-flow/step-7-approval-success-screen.png" alt="Organization approval successful screen" loading="eager"></div><div class="mockup-caption"><span>Your approved organization is now shown in SparkX and ready for setup.</span></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-nav-footer">
+          <button class="btn-nav btn-nav-prev" data-nav-target="section-03">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <span data-i18n="prevBtn">Previous Step</span>
+          </button>
+          <button class="btn-nav btn-nav-next" data-nav-target="section-05">
+            <span data-i18n="nextBtn">Next Step</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 05: Setting Up Your Organization (Revised: Detailed 8 Steps)
+           ==================================================================== -->
+      <section id="section-05" class="onboarding-section">
+        <div class="section-header-block">
+          <span class="section-pill-tag" data-i18n="s5Badge">Step 05 • Organization Setup</span>
+          <h2 class="section-main-title" data-i18n="s5Title">Setting Up Your Organization</h2>
+          <p class="section-lead-text" data-i18n="s5Lead">A comprehensive, step-by-step administrative guide for configuring your company's workspace after Super Admin approval.</p>
+        </div>
+
+        <!-- Prerequisite Banner -->
+        <div class="stage-alert-box" style="background: #ffeffa; border-color: #bfdbfe; color: #1e40af; margin-bottom: 32px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink: 0;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          <span data-i18n="s5PrereqNotice">Prerequisites: The organization setup wizard is accessible only AFTER: 1. Account creation; 2. Email verification; 3. Super Admin approval; and 4. Successful login.</span>
+        </div>
+
+        <nav class="setup-subnav" aria-label="Organization setup sections">
+          <a href="#setup-step-1">Organization</a><a href="#setup-step-2">Modules</a><a href="#setup-step-3">Levels</a><a href="#setup-step-4">Policies</a><a href="#setup-step-5">Limits</a><a href="#setup-step-6">Structure</a><a href="#setup-step-7">Starting Data</a><a href="#setup-step-8">Invite Team</a>
+        </nav>
+
+        <!-- 8 Detailed Organization Setup Step Cards -->
+
+        <!-- Setup Step 1 -->
+        <div class="setup-step-card" id="setup-step-1">
+          <div class="setup-card-header">
+            <div class="setup-step-title-wrap">
+              <span class="setup-step-circle">1</span>
+              <h3 class="setup-step-heading" data-i18n="setup1Title">Step 1: Organization Profile</h3>
+            </div>
+            <span class="section-pill-tag" style="margin: 0;">Step 1 of 8</span>
+          </div>
+
+          <div class="setup-meta-grid">
+            <div class="meta-box meta-purpose">
+              <div class="meta-label">Purpose</div>
+              <div class="meta-text" data-i18n="setup1Purpose">Establish the legal entity, country, base currency, and time zone for the organization.</div>
+            </div>
+            <div class="meta-box meta-prepare">
+              <div class="meta-label">What You Need to Prepare</div>
+              <div class="meta-text" data-i18n="setup1Prep">Company Legal Name, Short Code (e.g. MJL), NPWP / Reg. no., and Company Timezone.</div>
+            </div>
+          </div>
+
+          <div class="instructions-block">
+            <h4 class="instructions-title">Instructions:</h4>
+            <ul class="instructions-list">
+              <li class="instruction-item"><span class="inst-num">1</span><span>Verify the pre-filled <strong>Organization Name</strong> (e.g., ABC Group) and unique system-assigned organization code.</span></li>
+              <li class="instruction-item"><span class="inst-num">2</span><span>Enter the <strong>First Company (legal name)</strong> and define a concise <strong>Short code</strong> (e.g. ABC).</span></li>
+              <li class="instruction-item"><span class="inst-num">3</span><span>Input the official <strong>NPWP / Reg. no.</strong> for corporate compliance.</span></li>
+              <li class="instruction-item"><span class="inst-num">4</span><span>Confirm the <strong>Country</strong> (e.g. Indonesia) and select your operational <strong>Time zone</strong> (e.g. Asia/Jakarta GMT+7).</span></li>
+              <li class="instruction-item"><span class="inst-num">5</span><span>Click <strong>Save & continue</strong> to proceed to module configuration.</span></li>
+            </ul>
+          </div>
+
+          <div class="browser-mockup">
+            <div class="mockup-toolbar">
+              <div class="mockup-dots"><span class="mockup-dot dot-red"></span><span class="mockup-dot dot-yellow"></span><span class="mockup-dot dot-green"></span></div>
+              <div class="mockup-address-bar"><span>https://nautilus-staging...run.app/ess/setup (Step 1)</span></div>
+              <div class="mockup-zoom-hint"><span data-i18n="zoomHint">Click image to zoom</span></div>
+            </div>
+            <div class="mockup-viewport">
+              <img src="assets/screenshots/source/set-up-organization.png" alt="Step 1 Organization Profile" loading="eager">
+            </div>
+            <div class="mockup-caption">
+              <span>Actual SparkX interface: Step 1 Organization profile form showing country, currency lock, and time zone settings.</span>
+            </div>
+          </div>
+
+          <div class="source-shot-section">
+      <div class="source-shot-heading">
+        <span class="source-shot-kicker">SCREEN REFERENCES</span>
+        <span class="source-shot-title">SparkX interface screenshots</span>
+        <span class="source-shot-hint">Select any image to view it in full size.</span>
+      </div>
+      <div class="source-shot-grid">
+        <figure class="source-shot-card">
+          <div class="mockup-viewport">
+            <img src="assets/screenshots/source/set-up-abc-group.png" alt="Organization setup workspace after profile creation" loading="eager">
+          </div>
+          <figcaption>Organization setup workspace after profile creation</figcaption>
+        </figure>
+        <figure class="source-shot-card">
+          <div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/Set%20up%20Organization.png" alt="Organization profile setup" loading="eager"></div>
+          <figcaption>Organization profile setup</figcaption>
+        </figure>
+      </div>
+    </div>
+
+          <div class="important-notes-card">
+            <div class="notes-header">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <span>Important Notes:</span>
+            </div>
+            <p class="notes-body" data-i18n="setup1Notes">Currency is permanently locked to IDR at creation and cannot be changed later. Subsidiaries can be added later under Companies & Structure.</p>
+          </div>
+        </div>
+
+        <!-- Setup Step 2 -->
+        <div class="setup-step-card" id="setup-step-2">
+          <div class="setup-card-header">
+            <div class="setup-step-title-wrap">
+              <span class="setup-step-circle">2</span>
+              <h3 class="setup-step-heading" data-i18n="setup2Title">Step 2: Module Selection</h3>
+            </div>
+            <span class="section-pill-tag" style="margin: 0;">Step 2 of 8</span>
+          </div>
+
+          <div class="setup-meta-grid">
+            <div class="meta-box meta-purpose">
+              <div class="meta-label">Purpose</div>
+              <div class="meta-text" data-i18n="setup2Purpose">Select which functional HR and workplace modules are active across the entire organization.</div>
+            </div>
+            <div class="meta-box meta-prepare">
+              <div class="meta-label">What You Need to Prepare</div>
+              <div class="meta-text" data-i18n="setup2Prep">Decide which operational features your organization requires (Time & Attendance, Leave, Overtime, Travel, Expenses, etc.).</div>
+            </div>
+          </div>
+
+          <div class="instructions-block">
+            <h4 class="instructions-title">Instructions:</h4>
+            <ul class="instructions-list">
+              <li class="instruction-item"><span class="inst-num">1</span><span>Review the 11 available modules presented as toggle switches (Time & Attendance, Overtime, Leave, Medical Reimbursement, Travel, Claim & Expenses, Document Center, Onboarding, Offboarding, iShop & Assets, Meeting Rooms).</span></li>
+              <li class="instruction-item"><span class="inst-num">2</span><span>Toggle switches On or Off according to your operational scope.</span></li>
+              <li class="instruction-item"><span class="inst-num">3</span><span>Notice dependency rules: turning off a prerequisite automatically disables dependent features.</span></li>
+              <li class="instruction-item"><span class="inst-num">4</span><span>Click <strong>Save modules</strong>, then click <strong>Continue</strong> to advance to job leveling.</span></li>
+            </ul>
+          </div>
+
+          <div class="source-shot-section">
+      <div class="source-shot-heading">
+        <span class="source-shot-kicker">SCREEN REFERENCES</span>
+        <span class="source-shot-title">SparkX interface screenshots</span>
+        <span class="source-shot-hint">Select any image to view it in full size.</span>
+      </div>
+      <div class="source-shot-grid">
+        <figure class="source-shot-card">
+          <div class="mockup-viewport">
+            <img src="assets/screenshots/source/set-up-module.png" alt="Module selection overview" loading="eager">
+          </div>
+          <figcaption>Module selection overview</figcaption>
+        </figure><figure class="source-shot-card">
+          <div class="mockup-viewport">
+            <img src="assets/screenshots/source/set-up-module-2.png" alt="Module selection and available modules" loading="eager">
+          </div>
+          <figcaption>Module selection and available modules</figcaption>
+        </figure><figure class="source-shot-card">
+          <div class="mockup-viewport">
+            <img src="assets/screenshots/source/set-up-module-3-set.png" alt="Module settings and selection" loading="eager">
+          </div>
+          <figcaption>Module settings and selection</figcaption>
+        </figure><figure class="source-shot-card">
+          <div class="mockup-viewport">
+            <img src="assets/screenshots/source/set-up-module-4-confrumation.png" alt="Module selection confirmation" loading="eager">
+          </div>
+          <figcaption>Module switch off confirmation</figcaption>
+        </figure><figure class="source-shot-card">
+          <div class="mockup-viewport">
+            <img src="assets/screenshots/source/set-up-module-5-continue-button.png" alt="Continue after saving module settings" loading="eager">
+          </div>
+          <figcaption>Continue after saving module settings</figcaption>
+        </figure>
+      </div>
+    </div>
+        </div>
+
+        <!-- Setup Step 3 -->
+        <div class="setup-step-card" id="setup-step-3">
+          <div class="setup-card-header">
+            <div class="setup-step-title-wrap">
+              <span class="setup-step-circle">3</span>
+              <h3 class="setup-step-heading" data-i18n="setup3Title">Step 3: Job Levels</h3>
+            </div>
+            <span class="section-pill-tag" style="margin: 0;">Step 3 of 8</span>
+          </div>
+
+          <div class="setup-meta-grid">
+            <div class="meta-box meta-purpose">
+              <div class="meta-label">Purpose</div>
+              <div class="meta-text" data-i18n="setup3Purpose">Establish corporate hierarchy layers (Direktur, Manager, HR, Staff) and specific levels used for policy limits.</div>
+            </div>
+            <div class="meta-box meta-prepare">
+              <div class="meta-label">What You Need to Prepare</div>
+              <div class="meta-text" data-i18n="setup3Prep">Organizational job leveling structure and seniority hierarchy.</div>
+            </div>
+          </div>
+
+          <div class="instructions-block">
+            <h4 class="instructions-title">Instructions:</h4>
+            <ul class="instructions-list">
+              <li class="instruction-item"><span class="inst-num">1</span><span>Inspect the pre-configured default layers: <strong>Direktur</strong>, <strong>Manager</strong>, <strong>HR</strong>, and <strong>Staff</strong>.</span></li>
+              <li class="instruction-item"><span class="inst-num">2</span><span>Click <strong>+ Level</strong> inside a layer to add granular grades (e.g. Staff 1, Staff 2).</span></li>
+              <li class="instruction-item"><span class="inst-num">3</span><span>Use the up and down arrow buttons next to any layer to adjust seniority rank</span></li>
+              <li class="instruction-item"><span class="inst-num">4</span><span>Use the <strong>+ Layer</strong> input at the bottom to introduce brand-new organizational tiers if needed.</span></li>
+              <li class="instruction-item"><span class="inst-num">5</span><span>Click <strong>Continue</strong> once hierarchy levels are properly mapped.</span></li>
+            </ul>
+          </div>
+
+          <div class="source-shot-section"><div class="source-shot-heading"><span class="source-shot-kicker">SCREEN REFERENCES</span><span class="source-shot-title">Level configuration examples</span><span class="source-shot-hint">Additional screenshots from the setup flow.</span></div><div class="source-shot-grid"><figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20level/level.png" alt="Level configuration" loading="eager"></div><figcaption>Level configuration</figcaption></figure><figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20level/Level%202.png" alt="Additional level configuration" loading="eager"></div><figcaption>Additional level configuration</figcaption></figure></div></div><div class="important-notes-card">
+            <div class="notes-header">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <span>Important Notes:</span>
+            </div>
+            <p class="notes-body" data-i18n="setup3Notes">At least one level is mandatory because expense limits and travel rates in Step 5 map directly to these levels.</p>
+          </div>
+        </div>
+
+        <!-- Setup Step 4 -->
+        <div class="setup-step-card" id="setup-step-4">
+          <div class="setup-card-header">
+            <div class="setup-step-title-wrap">
+              <span class="setup-step-circle">4</span>
+              <h3 class="setup-step-heading" data-i18n="setup4Title">Step 4: Operational Policies</h3>
+            </div>
+            <span class="section-pill-tag" style="margin: 0;">Step 4 of 8</span>
+          </div>
+
+          <div class="setup-meta-grid">
+            <div class="meta-box meta-purpose">
+              <div class="meta-label">Purpose</div>
+              <div class="meta-text" data-i18n="setup4Purpose">Configure organizational rules across 5 operational pillars: Leave, Claim & Expenses, Travel, Overtime, and Approval Routing.</div>
+            </div>
+            <div class="meta-box meta-prepare">
+              <div class="meta-label">What You Need to Prepare</div>
+              <div class="meta-text" data-i18n="setup4Prep">Leave allowances (Annual, Sick, Maternity), receipt attachment thresholds, travel per diems, overtime multipliers, and approval chains.</div>
+            </div>
+          </div>
+
+          <div class="instructions-block">
+            <h4 class="instructions-title">Instructions across 5 Sub-Tabs:</h4>
+            <ul class="instructions-list">
+              <li class="instruction-item"><span class="inst-num">1</span><span><strong>Leave Sub-tab:</strong> Configure annual allowances, carryover limits, advance notice days, and add custom leave types via "+ Add leave type".</span></li>
+              <li class="instruction-item"><span class="inst-num">2</span><span><strong>Claim & Expenses Sub-tab:</strong> Set mandatory receipt attachment requirements and operational categories (Meals, Transport, Accommodation, Parking, Groceries, Supplies, Other).</span></li>
+              <li class="instruction-item"><span class="inst-num">3</span><span><strong>Travel Sub-tab:</strong> Define domestic/international daily per diems and accommodation booking standards.</span></li>
+              <li class="instruction-item"><span class="inst-num">4</span><span><strong>Overtime Sub-tab:</strong> Set job level eligibility, workday vs holiday multipliers, and minimum request duration.</span></li>
+              <li class="instruction-item"><span class="inst-num">5</span><span><strong>Approval Routing Sub-tab:</strong> Establish approval tiers (Direct Manager -> Department Head -> HR -> Finance) for each request type.</span></li>
+            </ul>
+          </div>
+
+          <div class="policy-subnav-wrap">
+            <h4 class="instructions-title">Policy menu overview</h4>
+            <p class="prop-desc">Use these menu categories to navigate the policy settings. Each category can be configured separately.</p>
+            <nav class="policy-subnav" aria-label="Policy setup sections">
+              <a href="#policy-leaves">Leaves</a>
+              <a href="#policy-claims">Claim &amp; Expenses</a>
+              <a href="#policy-travel">Travel</a>
+              <a href="#policy-overtime">Overtime</a>
+              <a href="#policy-routing">Approval Routing</a>
+            </nav>
+          </div>
+          <div class="policy-detail-group" id="policy-leaves">
+            <h4 class="policy-detail-title">1. Leaves</h4>
+            <p class="prop-desc">Open the Leaves menu to review leave types and configure their allowances and rules. Use the available add, edit, or remove controls as needed, then save the settings.</p>
+            <div class="source-shot-grid">
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20policies/leaves/policies%20-%20leave.png" alt="Leaves policy menu" loading="eager"></div><figcaption>Leaves policy menu</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20policies/leaves/policies%20-%20leave%20-%20add%201.png" alt="Add a leave type" loading="eager"></div><figcaption>Add a leave type</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20policies/leaves/Policies%20-%20leave%20-%20edit.png" alt="Edit leave settings" loading="eager"></div><figcaption>Edit leave settings</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20policies/leaves/policies%20-%20leave%20save%20settings.png" alt="Save leave settings" loading="eager"></div><figcaption>Save leave settings</figcaption></figure>
+            </div>
+          </div>
+          <div class="policy-detail-group" id="policy-claims">
+            <h4 class="policy-detail-title">2. Claim &amp; Expenses</h4>
+            <p class="prop-desc">Open Claim &amp; Expenses to configure expense settings, categories, and the rules employees must follow when submitting claims.</p>
+            <div class="source-shot-grid">
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20policies/claim%20%26%20expenses/policies%20-%20claim%20%26%20expenses.png" alt="Claim and expenses policy overview" loading="eager"></div><figcaption>Claim &amp; Expenses overview</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20policies/claim%20%26%20expenses/policies%20-%20c%26e%20-%20setting.png" alt="Claim and expenses settings" loading="eager"></div><figcaption>Claim &amp; Expenses settings</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20policies/claim%20%26%20expenses/policies%20-%20c%26e%20-%20expenses%20category.png" alt="Expense categories" loading="eager"></div><figcaption>Expense categories</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20policies/claim%20%26%20expenses/policies%20-%20c%26e%20-%20add%20rules.png" alt="Add expense rules" loading="eager"></div><figcaption>Add expense rules</figcaption></figure>
+            </div>
+          </div>
+          <div class="policy-detail-group" id="policy-travel">
+            <h4 class="policy-detail-title">3. Travel</h4>
+            <p class="prop-desc">Open Travel to configure travel-related policy settings, accommodation requirements, and supporting details.</p>
+            <div class="source-shot-grid">
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20policies/travel/POLIcies%20-%20travel.png" alt="Travel policy overview" loading="eager"></div><figcaption>Travel policy overview</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20policies/travel/policies%20-%20travel%20-%20seting.png" alt="Travel policy settings" loading="eager"></div><figcaption>Travel policy settings</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20policies/travel/policies%20-%20travel%20-%20accomodation.png" alt="Accommodation policy" loading="eager"></div><figcaption>Accommodation policy</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20policies/travel/policies%20-%20travel%20-%20accomodation%20add.png" alt="Add accommodation rule" loading="eager"></div><figcaption>Add accommodation rule</figcaption></figure>
+            </div>
+          </div>
+          <div class="policy-detail-group" id="policy-overtime">
+            <h4 class="policy-detail-title">4. Overtime</h4>
+            <p class="prop-desc">Open Overtime to review overtime eligibility and configure the applicable overtime rules and limits.</p>
+            <div class="source-shot-grid">
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20policies/overtime/policies%20-%20overtime%20.png" alt="Overtime policy settings" loading="eager"></div><figcaption>Overtime policy settings</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20policies/overtime/policies%20-%20overtime%20-%20limits.png" alt="Overtime limits" loading="eager"></div><figcaption>Overtime limits</figcaption></figure>
+            </div>
+          </div>
+          <div class="policy-detail-group" id="policy-routing">
+            <h4 class="policy-detail-title">5. Approval Routing</h4>
+            <p class="prop-desc">Open Approval Routing to set up approval routes and templates for the relevant request types. Review each route before completing the policy configuration.</p>
+            <div class="source-shot-grid">
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20policies/approval%20routing/policies%20-%20routing.png" alt="Approval routing overview" loading="eager"></div><figcaption>Approval routing overview</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20policies/approval%20routing/policies%20-%20routing-%20approval%20template.png" alt="Approval templates" loading="eager"></div><figcaption>Approval templates</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20policies/approval%20routing/policies%20-%20routing%20-%20add%20aproval%20template.png" alt="Add approval template" loading="eager"></div><figcaption>Add approval template</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20policies/approval%20routing/policies%20-routing%20moduels%20-%20change%20set.png" alt="Change approval route modules" loading="eager"></div><figcaption>Change approval route modules</figcaption></figure>
+            </div>
+          </div>
+
+          <div class="source-shot-section">
+      <div class="source-shot-grid">
+        <figure class="source-shot-card">
+          <div class="mockup-viewport">
+            <img src="assets/screenshots/source/policies.png" alt="Operational policies overview" loading="eager">
+          </div>
+          <figcaption>Operational policies overview</figcaption>
+        </figure><figure class="source-shot-card">
+          <div class="mockup-viewport">
+            <img src="assets/screenshots/source/policies-leave.png" alt="Leave policy settings" loading="eager">
+          </div>
+          <figcaption>Leave policy settings</figcaption>
+        </figure><figure class="source-shot-card">
+          <div class="mockup-viewport">
+            <img src="assets/screenshots/source/policies-claim-expenses.png" alt="Claim and expenses policy settings" loading="eager">
+          </div>
+          <figcaption>Claim and expenses policy settings</figcaption>
+        </figure><figure class="source-shot-card">
+          <div class="mockup-viewport">
+            <img src="assets/screenshots/source/policies-travel.png" alt="Travel policy settings" loading="eager">
+          </div>
+          <figcaption>Travel policy settings</figcaption>
+        </figure><figure class="source-shot-card">
+          <div class="mockup-viewport">
+            <img src="assets/screenshots/source/policies-overtime.png" alt="Overtime policy settings" loading="eager">
+          </div>
+          <figcaption>Overtime policy settings</figcaption>
+        </figure><figure class="source-shot-card">
+          <div class="mockup-viewport">
+            <img src="assets/screenshots/source/policies-routing.png" alt="Approval routing settings" loading="eager">
+          </div>
+          <figcaption>Approval routing settings</figcaption>
+        </figure>
+      </div>
+    </div>
+
+          <div class="important-notes-card">
+            <div class="notes-header">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <span>Important Notes:</span>
+            </div>
+            <p class="notes-body" data-i18n="setup4Notes">Approval routing allows multi-tier hierarchies (e.g. Direct Manager -> Dept Head -> HR -> Finance) for each request type.</p>
+          </div>
+        </div>
+
+        <!-- Setup Step 5 -->
+        <div class="setup-step-card" id="setup-step-5" style="border-color: #fde68a;">
+          <div class="setup-card-header">
+            <div class="setup-step-title-wrap">
+              <span class="setup-step-circle" style="background: linear-gradient(135deg, #d97706, #b45309);">5</span>
+              <h3 class="setup-step-heading" data-i18n="setup5Title">Step 5: Limits & Allowances (Mandatory Gateway)</h3>
+            </div>
+            <span class="section-pill-tag" style="background: #fef3c7; color: #92400e; margin: 0;">Step 5 of 8 • Critical Gate</span>
+          </div>
+
+          <div class="setup-meta-grid">
+            <div class="meta-box meta-purpose">
+              <div class="meta-label">Purpose</div>
+              <div class="meta-text" data-i18n="setup5Purpose">Set financial spending caps and travel booking entitlements per job level for expenses and business trips.</div>
+            </div>
+            <div class="meta-box meta-prepare">
+              <div class="meta-label">What You Need to Prepare</div>
+              <div class="meta-text" data-i18n="setup5Prep">Category caps (Meals, Transport, Accommodation, Parking, Groceries, Supplies) and allowed flight/train classes.</div>
+            </div>
+          </div>
+
+          <div class="instructions-block">
+            <h4 class="instructions-title">Instructions across 2 Sub-Tabs:</h4>
+            <ul class="instructions-list">
+              <li class="instruction-item"><span class="inst-num">1</span><span><strong>Claim Limits Matrix:</strong> For every job level (Direktur, Manager, HR, Staff), enter exact monetary caps or check "No limit" across all expense categories.</span></li>
+              <li class="instruction-item"><span class="inst-num">2</span><span><strong>Travel Limits Matrix:</strong> Input daily per diem allowances and hotel night caps for each level.</span></li>
+              <li class="instruction-item"><span class="inst-num">3</span><span><strong>Transportation Classes:</strong> Open class selection popovers to tick allowed flight classes (Economy, Business, etc.) and train classes (Economy, Executive) per level.</span></li>
+              <li class="instruction-item"><span class="inst-num">4</span><span>Click <strong>Continue</strong> to proceed to Structure.</span></li>
+            </ul>
+          </div>
+
+          <div class="source-shot-section">
+            <div class="source-shot-heading"><span class="source-shot-kicker">SCREEN REFERENCES</span><span class="source-shot-title">Limit configuration examples</span><span class="source-shot-hint">Claim &amp; Expenses and Travel limit screens.</span></div>
+            <h4 class="policy-detail-title">Claim &amp; Expenses limits</h4>
+            <div class="source-shot-grid">
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20limits/claim%20%26%20expenses/limit%20-%20info.png" alt="Claim and expenses limit information" loading="eager"></div><figcaption>Limit information</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20limits/claim%20%26%20expenses/limit%20-%20meals.png" alt="Meals limit" loading="eager"></div><figcaption>Meals limit</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20limits/claim%20%26%20expenses/limit%20-%20transport.png" alt="Transport limit" loading="eager"></div><figcaption>Transport limit</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20limits/claim%20%26%20expenses/limit%20-%20accomodation,%20parkign.png" alt="Accommodation and parking limits" loading="eager"></div><figcaption>Accommodation and parking limits</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20limits/claim%20%26%20expenses/limit%20-%20groceries,%20office%20supplies.png" alt="Groceries and office supplies limits" loading="eager"></div><figcaption>Groceries and office supplies limits</figcaption></figure>
+            </div>
+            <h4 class="policy-detail-title" style="margin-top:22px;">Travel limits</h4>
+            <div class="source-shot-grid">
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20limits/travel/travel%20limit.png" alt="Travel limit overview" loading="eager"></div><figcaption>Travel limit overview</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20limits/travel/travel%20limit%20international%20rule.png" alt="International travel rules" loading="eager"></div><figcaption>International travel rules</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20limits/travel/travel%20limit%20-%20international%20rule%20add.png" alt="Add international travel rule" loading="eager"></div><figcaption>Add international travel rule</figcaption></figure>
+              <figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20limits/travel/travel%20limit%20-%20other%20allowance.png" alt="Other travel allowances" loading="eager"></div><figcaption>Other travel allowances</figcaption></figure>
+            </div>
+          </div>
+
+          <div class="important-notes-card" style="background: #fffbeb; border-color: #fde68a;">
+            <div class="notes-header" style="color: #92400e;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              <span>CRITICAL PREREQUISITE GATEWAY:</span>
+            </div>
+            <p class="notes-body" style="color: #78350f;" data-i18n="setup5Notes">CRITICAL GATEWAY: SparkX locks organization activation until ALL claim categories and travel classes are configured at every level. The system displays a dedicated warning: 'Still to do before the company can be used'.</p>
+          </div>
+        </div>
+
+        <!-- Setup Step 6 -->
+        <div class="setup-step-card" id="setup-step-6">
+          <div class="setup-card-header">
+            <div class="setup-step-title-wrap">
+              <span class="setup-step-circle">6</span>
+              <h3 class="setup-step-heading" data-i18n="setup6Title">Step 6: Company Structure</h3>
+            </div>
+            <span class="section-pill-tag" style="margin: 0;">Step 6 of 8</span>
+          </div>
+
+          <div class="setup-meta-grid">
+            <div class="meta-box meta-purpose">
+              <div class="meta-label">Purpose</div>
+              <div class="meta-text" data-i18n="setup6Purpose">Build the organizational chart dividing the company into directorates, divisions, and departments.</div>
+            </div>
+            <div class="meta-box meta-prepare">
+              <div class="meta-label">What You Need to Prepare</div>
+              <div class="meta-text" data-i18n="setup6Prep">Corporate departmental hierarchy and team reporting structure.</div>
+            </div>
+          </div>
+
+          <div class="instructions-block">
+            <h4 class="instructions-title">Instructions:</h4>
+            <ul class="instructions-list">
+              <li class="instruction-item"><span class="inst-num">1</span><span>Click <strong>+ Add directorate</strong> to establish a main division branch.</span></li>
+              <li class="instruction-item"><span class="inst-num">2</span><span>Input division titles and list nested departments separated by commas.</span></li>
+              <li class="instruction-item"><span class="inst-num">3</span><span>Alternatively, click <strong>+ Add division (no directorate)</strong> for standalone functional departments.</span></li>
+              <li class="instruction-item"><span class="inst-num">4</span><span>Click <strong>Continue</strong> to proceed.</span></li>
+            </ul>
+          </div>
+
+          <div class="source-shot-section">
+      <div class="source-shot-grid">
+        <figure class="source-shot-card">
+          <div class="mockup-viewport">
+            <img src="assets/screenshots/source/structure.png" alt="Company structure overview" loading="eager">
+          </div>
+          <figcaption>Company structure overview</figcaption>
+        </figure><figure class="source-shot-card">
+          <div class="mockup-viewport">
+            <img src="assets/screenshots/source/structure-add.png" alt="Adding a structure element" loading="eager">
+          </div>
+          <figcaption>Adding a structure element</figcaption>
+        </figure>
+      </div>
+    </div>
+
+          <div class="source-shot-section"><div class="source-shot-heading"><span class="source-shot-kicker">SCREEN REFERENCES</span><span class="source-shot-title">Organization structure examples</span><span class="source-shot-hint">Additional screenshots from the setup flow.</span></div><div class="source-shot-grid"><figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20structure/structure.png" alt="Organization structure" loading="eager"></div><figcaption>Organization structure</figcaption></figure><figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20structure/structure%20-%20add%20.png" alt="Add organization structure" loading="eager"></div><figcaption>Add organization structure</figcaption></figure></div></div><div class="important-notes-card">
+            <div class="notes-header">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <span>Important Notes:</span>
+            </div>
+            <p class="notes-body" data-i18n="setup6Notes">This step is optional during initial setup and can be configured or customized later under Companies & Structure.</p>
+          </div>
+        </div>
+
+        <!-- Setup Step 7 -->
+        <div class="setup-step-card" id="setup-step-7">
+          <div class="setup-card-header">
+            <div class="setup-step-title-wrap">
+              <span class="setup-step-circle">7</span>
+              <h3 class="setup-step-heading" data-i18n="setup7Title">Step 7: Starting Data</h3>
+            </div>
+            <span class="section-pill-tag" style="margin: 0;">Step 7 of 8</span>
+          </div>
+
+          <div class="setup-meta-grid">
+            <div class="meta-box meta-purpose">
+              <div class="meta-label">Purpose</div>
+              <div class="meta-text" data-i18n="setup7Purpose">Determine initial database state: seed with mock testing data or launch with a clean database.</div>
+            </div>
+            <div class="meta-box meta-prepare">
+              <div class="meta-label">What You Need to Prepare</div>
+              <div class="meta-text" data-i18n="setup7Prep">Choose between 'Start with sample data' (~10 fictional employees and mock reviews) or 'Start blank'.</div>
+            </div>
+          </div>
+
+          <div class="instructions-block">
+            <h4 class="instructions-title">Instructions:</h4>
+            <ul class="instructions-list">
+              <li class="instruction-item"><span class="inst-num">1</span><span>Choose <strong>Start with sample data</strong> if you wish to explore sample workflows with ~10 fictional employee records.</span></li>
+              <li class="instruction-item"><span class="inst-num">2</span><span>Choose <strong>Start blank</strong> to begin in clean production mode with only your administrator account.</span></li>
+              <li class="instruction-item"><span class="inst-num">3</span><span>Click <strong>Continue</strong> to advance to final team invitations.</span></li>
+            </ul>
+          </div>
+
+          <div class="source-shot-section"><div class="source-shot-heading"><span class="source-shot-kicker">SCREEN REFERENCES</span><span class="source-shot-title">Starting data selection</span><span class="source-shot-hint">Additional screenshots from the setup flow.</span></div><div class="source-shot-grid"><figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20up%20data/starting%20data.png" alt="Starting data choices" loading="eager"></div><figcaption>Starting data choices</figcaption></figure></div></div><div class="important-notes-card">
+            <div class="notes-header">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <span>Important Notes:</span>
+            </div>
+            <p class="notes-body" data-i18n="setup7Notes">Sample data can be purged at any time from administrative settings once testing is concluded.</p>
+          </div>
+        </div>
+
+        <!-- Setup Step 8 -->
+        <div class="setup-step-card" id="setup-step-8">
+          <div class="setup-card-header">
+            <div class="setup-step-title-wrap">
+              <span class="setup-step-circle">8</span>
+              <h3 class="setup-step-heading" data-i18n="setup8Title">Step 8: Invite Your Team</h3>
+            </div>
+            <span class="section-pill-tag" style="margin: 0;">Step 8 of 8 • Final Step</span>
+          </div>
+
+          <div class="setup-meta-grid">
+            <div class="meta-box meta-purpose">
+              <div class="meta-label">Purpose</div>
+              <div class="meta-text" data-i18n="setup8Purpose">Send activation invitations to initial HR colleagues, managers, and leadership.</div>
+            </div>
+            <div class="meta-box meta-prepare">
+              <div class="meta-label">What You Need to Prepare</div>
+              <div class="meta-text" data-i18n="setup8Prep">Names, official work emails, and platform roles (EMPLOYEE, MANAGER, HR, CHRO, ADMIN BU, ADMIN).</div>
+            </div>
+          </div>
+
+          <div class="instructions-block">
+            <h4 class="instructions-title">Instructions:</h4>
+            <ul class="instructions-list">
+              <li class="instruction-item"><span class="inst-num">1</span><span>Input colleague's <strong>Full name</strong> and official <strong>Work email</strong>.</span></li>
+              <li class="instruction-item"><span class="inst-num">2</span><span>Select their permission <strong>Role</strong>: EMPLOYEE, MANAGER, HR, CHRO, ADMIN BU, or ADMIN.</span></li>
+              <li class="instruction-item"><span class="inst-num">3</span><span>Click <strong>+ Invite</strong> to send their 24-hour activation link.</span></li>
+              <li class="instruction-item"><span class="inst-num">4</span><span>Once the prerequisite checklist is satisfied, click the blue <strong>Finish setup</strong> button to unlock full platform operations.</span></li>
+            </ul>
+          </div>
+
+          <div class="browser-mockup">
+            <div class="mockup-toolbar">
+              <div class="mockup-dots"><span class="mockup-dot dot-red"></span><span class="mockup-dot dot-yellow"></span><span class="mockup-dot dot-green"></span></div>
+              <div class="mockup-address-bar"><span>https://nautilus-staging...run.app/ess/setup (Step 8)</span></div>
+              <div class="mockup-zoom-hint"><span data-i18n="zoomHint">Click image to zoom</span></div>
+            </div>
+            <div class="mockup-viewport">
+              <img src="assets/screenshots/source/invite-team.png" alt="Step 8 Invite Your Team Interface" loading="eager">
+            </div>
+            <div class="mockup-caption">
+              <span>Actual SparkX interface: Step 8 Invite your team form showing role selector, invitation dispatch, and prerequisite checklist.</span>
+            </div>
+          </div>
+
+          <div class="source-shot-section"><div class="source-shot-heading"><span class="source-shot-kicker">SCREEN REFERENCES</span><span class="source-shot-title">Team invitation flow</span><span class="source-shot-hint">Additional screenshots from the setup flow.</span></div>
+          <div class="source-shot-grid"><figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20invite%20team/send%20invitation%20team.png" alt="Send team invitation" loading="eager"></div><figcaption>Succesful invitation pop up</figcaption></figure><figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20invite%20team/send%20invitation%20email.png" alt="Invitation email" loading="eager"></div><figcaption>Invitation email example 1</figcaption></figure><figure class="source-shot-card"><div class="mockup-viewport"><img src="assets/screenshots/feedback/set%20up%20organization/set%20invite%20team/invite%20email%202.jpeg" alt="Invitation email example" loading="eager"></div><figcaption>Invitation email example 2</figcaption></figure></div></div><div class="important-notes-card">
+            <div class="notes-header">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <span>Important Notes:</span>
+            </div>
+            <p class="notes-body" data-i18n="setup8Notes">Each invitee receives an activation email valid for 24 hours. For bulk onboarding, use the CSV import tool under Employees post-setup. Finish setup unlocks once Step 5 limits are fulfilled.</p>
+          </div>
+        </div>
+
+        <div class="section-nav-footer">
+          <button class="btn-nav btn-nav-prev" data-nav-target="section-04">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <span data-i18n="prevBtn">Previous Step</span>
+          </button>
+          <button class="btn-nav btn-nav-next" data-nav-target="section-06">
+            <span data-i18n="nextBtn">Next Step</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 06: Ready to Get Started
+           ==================================================================== -->
+      <section id="section-06" class="onboarding-section">
+        <div class="section-header-block">
+          <span class="section-pill-tag" data-i18n="s6Badge">Step 06 • Ready</span>
+          <h2 class="section-main-title" data-i18n="s6Title">Ready to Get Started!</h2>
+          <p class="section-lead-text" data-i18n="s6Lead">You're now equipped with everything needed to make the most of SparkX.</p>
+        </div>
+
+        <div class="source-shot-section">
+          <div class="source-shot-heading"><span class="source-shot-kicker">YOUR WORKSPACE</span><span class="source-shot-title">Your SparkX dashboard</span><span class="source-shot-hint">Once setup is complete, this is the dashboard you can start exploring.</span></div>
+          <div class="browser-mockup">
+            <div class="mockup-toolbar"><div class="mockup-dots"><span class="mockup-dot dot-red"></span><span class="mockup-dot dot-yellow"></span><span class="mockup-dot dot-green"></span></div><div class="mockup-address-bar"><span>SparkX — Dashboard</span></div><div class="mockup-zoom-hint"><span data-i18n="zoomHint">Click image to zoom</span></div></div>
+            <div class="mockup-viewport"><img src="assets/screenshots/feedback/dashboard.png" alt="SparkX dashboard" loading="eager"></div>
+            <div class="mockup-caption"><span>Dashboard view after completing organization setup.</span></div>
+          </div>
+        </div>
+
+        <!-- Checklist Card -->
+        <div class="prop-card" style="margin-bottom: 28px; background: #ffffff;">
+          <h3 class="prop-title" style="margin-bottom: 16px;" data-i18n="recapTitle">Onboarding Checklist Summary</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+            <li style="display: flex; align-items: center; gap: 12px; font-size: 14.5px;">
+              <span style="width: 22px; height: 22px; border-radius: 50%; background: #dcfce7; color: #16a34a; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">✓</span>
+              <span data-i18n="check1">Found your HR invitation email from no-reply@sparkx.life.</span>
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; font-size: 14.5px;">
+              <span style="width: 22px; height: 22px; border-radius: 50%; background: #dcfce7; color: #16a34a; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">✓</span>
+              <span data-i18n="check2">Clicked the verification link within 24 hours.</span>
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; font-size: 14.5px;">
+              <span style="width: 22px; height: 22px; border-radius: 50%; background: #dcfce7; color: #16a34a; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">✓</span>
+              <span data-i18n="check3">Set your secure 8+ character password.</span>
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; font-size: 14.5px;">
+              <span style="width: 22px; height: 22px; border-radius: 50%; background: #dcfce7; color: #16a34a; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">✓</span>
+              <span data-i18n="check4">Bookmarked the SparkX login URL on your browser.</span>
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; font-size: 14.5px;">
+              <span style="width: 22px; height: 22px; border-radius: 50%; background: #dcfce7; color: #16a34a; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">✓</span>
+              <span data-i18n="check5">Explored your Employee Self-Service (ESS) profile.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Closing encouragement box -->
+        <div class="hero-welcome-card" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+          <h3 class="hero-welcome-title">Empowering Your Everyday Work</h3>
+          <p class="hero-welcome-desc" data-i18n="closingMsg">Welcome aboard! SparkX is here to make your daily work easier, faster, and more transparent. Have questions? Reach out to your team lead or HR administrator.</p>
+        </div>
+
+        <div class="section-nav-footer">
+          <button class="btn-nav btn-nav-prev" data-nav-target="section-05">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <span data-i18n="prevBtn">Previous Step</span>
+          </button>
+          <button id="finishOnboardingBtn" class="btn-nav btn-nav-finish">
+            <span data-i18n="launchBtn">Open SparkX Login Page</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Full-Resolution Screenshot Lightbox Modal -->
+  <div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Screenshot Preview">
+    <div class="lightbox-content-wrap">
+      <img id="lightboxImg" class="lightbox-image" src="" alt="Screenshot Full View">
+      <div class="lightbox-caption-bar">
+        <span id="lightboxCaption">Screenshot View</span>
+        <button id="lightboxCloseBtn" class="lightbox-close-btn" aria-label="Close Preview">✕</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
